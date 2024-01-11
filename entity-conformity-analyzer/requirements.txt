@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+spacy
+beautifulsoup4
+lxml
+fuzzywuzzy
+python-Levenshtein
+asyncio-nats-client
+pymongo
