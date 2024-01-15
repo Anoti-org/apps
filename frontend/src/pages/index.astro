@@ -1,0 +1,140 @@
+---
+import { Tool } from "@/layouts/Tool";
+import "../../app/globals.css";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Welcome to Astro.">
+  <main>
+    <div class="title-container">
+      <h1>Welcome to <span class="text-gradient">Anoti</span></h1>
+      <p>
+        Garantissez votre conformité à l'obligation et au devoir de vigilance
+      </p>
+      <p>
+        Gagnez du temps et
+        <span class="text-gradient">maitrisez vos risques</span>
+        fournisseurs grâce à notre solution de due diligence
+      </p>
+    </div>
+    <Tool client:load />
+  </main>
+</Layout>
+
+<style>
+  body {
+    --grid-size: 20px;
+    --grid-strength: 1px;
+    --grid-dash: 5px;
+    --grid-gap: 5px;
+    --grid-color: rgba(255, 255, 255, 0.2);
+    --paper-color: black;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+
+    background-size:
+      var(--grid-dash) var(--grid-dash),
+      var(--grid-size) var(--grid-size);
+    background-image: linear-gradient(
+        to bottom,
+        transparent var(--grid-gap),
+        var(--paper-color) var(--grid-gap)
+      ),
+      linear-gradient(
+        to right,
+        var(--grid-color) var(--grid-strength),
+        transparent var(--grid-strength)
+      ),
+      linear-gradient(
+        to right,
+        transparent var(--grid-gap),
+        var(--paper-color) var(--grid-gap)
+      ),
+      linear-gradient(
+        to bottom,
+        var(--grid-color) var(--grid-strength),
+        transparent var(--grid-strength)
+      );
+    background-repeat: repeat;
+    background-position:
+      0 0,
+      0 0,
+      var(--grid-dash) var(--grid-dash),
+      var(--grid-dash) var(--grid-dash);
+  }
+
+  main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+    z-index: 1;
+  }
+
+  main:before {
+    isolation: isolate;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      rgba(0, 0, 0, 1) 30%,
+      rgba(0, 0, 0, 0.5) 70%,
+      rgba(0, 0, 0, 0.1) 90%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    z-index: -2;
+  }
+
+  .title-container {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-block: 100px;
+  }
+
+  main:after {
+    isolation: isolate;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: rgb(137, 58, 234);
+    background: radial-gradient(
+      rgba(137, 58, 234, 0.3) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    z-index: -1;
+  }
+
+  h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    margin: 0;
+    font-weight: 250;
+  }
+
+  .text-gradient {
+    background-image: var(--_accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+</style>
