@@ -226,7 +226,7 @@ export function Tool() {
     setLoading
   );
   useEffect(() => {
-    const ws = new WebSocket("ws://api.anoti.io/ws");
+    const ws = new WebSocket("wss://api.anoti.io/ws");
     ws.onmessage = (event) => {
       const data = JSON.parse(event.data);
       if (
