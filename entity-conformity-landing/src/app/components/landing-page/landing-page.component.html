@@ -1,0 +1,359 @@
+<ng-container *ngTemplateOutlet="header"></ng-container>
+<ng-container *ngTemplateOutlet="intro"></ng-container>
+<ng-container *ngIf="!isLanding"><ng-container *ngTemplateOutlet="goals"></ng-container></ng-container>
+<ng-container *ngTemplateOutlet="howItWorks"></ng-container>
+<ng-container *ngTemplateOutlet="prices"></ng-container>
+<ng-container *ngIf="!isLanding"><ng-container *ngTemplateOutlet="process"></ng-container></ng-container>
+<ng-container *ngTemplateOutlet="security"></ng-container>
+<ng-container *ngTemplateOutlet="footer"></ng-container>
+
+<ng-template #header>
+  <div class="header">
+    <img src="/assets/logo-anoti.svg">
+    <div class="headerButtonsContainer">
+      <button class="headerButton" [routerLink]="['/contractor']"> Donneurs d'ordre </button>
+      <button class="headerButton" [routerLink]="['/supplier']"> Fournisseurs </button>
+      <!--<button class="headerButton"> Manifeste </button>-->
+      <!--<button class="headerButton"> Blog </button>-->
+      <!--
+      <ng-container *ngIf="!isLanding">
+        <button class="askForDemo" (click)="requestDemo()">Demander une démo</button>
+        <button class="loginButton"> S'inscrire </button>
+      </ng-container>
+      -->
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #intro>
+  <div class="introContainer">
+    <div class="introCurvedBottomBorder"></div>
+    <div class="introContent">
+      <div class="introLeftSide">
+        <h1 class="introHeader">Garantissez votre conformité à l’obligation et au devoir de vigilance</h1>
+        <p class="introSubHeader">
+          Gagnez du temps et
+          <span class="introSubHeaderAffirmation">maitrisez vos risques</span>
+           fournisseurs grâce à notre solution de due diligence
+        </p>
+        <div class="introButtonsContainer">
+          <button class="askForDemo" (click)="requestDemo()">Essayer gratuitement</button>
+          <p class="gainTime">Gratuit et sans engagement</p>
+        </div>
+      </div>
+      <div class="introRightSide">
+        <img src="/assets/intro-image.svg" alt="">
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #goals>
+  <div class="goalsContainer">
+    <h1>Pourquoi choisir Anoti pour maitriser vos risques de travail dissimulé ?</h1>
+    <div class="argumentsList">
+      <div class="argument">
+        <img src="/assets/gain-time.png">
+        <h3 class="argumentTitle">Gagnez du temps</h3>
+        <p class="argumentDescription">Lancez une analyse en une minute, nous collectons les informations, vous n’avez plus qu’à analyser les résultats</p>
+      </div>
+
+      <div class="argument">
+        <img src="/assets/master-risks.png">
+        <h3 class="argumentTitle">Maitrisez les risques</h3>
+        <p class="argumentDescription">Vous êtes en conformité, vous évitez les sanctions et recouvrements URSSAF</p>
+      </div>
+
+      <div class="argument">
+        <img src="/assets/contribute-to-business.png">
+        <h3 class="argumentTitle">Contribuez au business</h3>
+        <p class="argumentDescription">Concevez des produits et services plus responsables et répondez aux attentes de vos clients</p>
+        <p class="argumentRemark">50% des consommateurs sont prêts à payer plus cher pour des produits plus éthiques</p>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #howItWorks>
+  <div class="howItWorksContainer">
+    <h1>Lancez en une minute vos analyses fournisseurs</h1>
+    <h3>Notre outil vous permet de collecter toutes les informations de <br> <span class="hovered">manière automatisée</span> à un seul et même endroit.</h3>
+    <div class="howItWorksExplained">
+      <div class="howItWorksLeftSide">
+
+        <div class="section">
+          <img src="/assets/puces.svg">
+          <div class="sectionContent">
+            <h2>Mise en conformité</h2>
+            <drop-down-text
+              [isAnimationEnabled]="!isMobile"
+              [title]="'Collecte des documents légaux'"
+              [content]="'Vos fournisseurs déposent leurs documents légaux (Kbis, Attestation de Vigilance, LNTE), nous les vérifions pour vous'">
+            </drop-down-text>
+
+            <drop-down-text
+              [isAnimationEnabled]="!isMobile"
+              [title]="'Collecte des condamnations'"
+              [content]="'Nous collectons les décisions de justice rendues sur vos fournisseurs pour travail dissimulé'">
+            </drop-down-text>
+
+            <drop-down-text
+              [isAnimationEnabled]="!isMobile"
+              [title]="'Cartographie e-réputationnelle'"
+              [content]="'Nous analysons le web (sites, presse, blogs, réseaux sociaux) afin de détecter des potentiels risques de travail dissimulé'"
+              [subContent]="'Recouvrement  moyen de 50 000€ pour les entreprises non conformes'">
+            </drop-down-text>
+          </div>
+        </div>
+
+        <div class="section">
+          <img src="/assets/puces.svg">
+          <div class="sectionContent">
+            <h2>Analyse fournisseurs</h2>
+            <drop-down-text
+              [isAnimationEnabled]="!isMobile"
+              [title]="'Collecte des informations légales'"
+              [content]="'Accédez aux dernières informations de vos fournisseurs (Bilan, Compte de résultats, liste des Dirigeants, Bénéficiaires Effectifs)'">
+            </drop-down-text>
+            <button class="contactAnExpert" (click)="requestDemo()">Demander une démo</button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="howItWorksRightSide">
+        <img src="/assets/screenshot2.svg" class="screenshot">
+        <img src="/assets/circle.png" class="circle">
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #prices>
+  <div class="pricesContainers" id="prices">
+    <div *ngIf="!isLanding" class="pricesCurvedBottomBorder"></div>
+    <img class="diamond1" src="/assets/diamond1.svg">
+    <img class="diamond2" src="/assets/diamond2.svg">
+    <img class="diamond3" src="/assets/diamond3.svg">
+    <div class="trialPrices">
+      <ng-container *ngIf="is6Months">
+        <h1>
+          Profitez de 6 mois offerts !
+        </h1>
+        <p>
+          Offre valable pour les 20 prochains clients.
+        </p>
+      </ng-container>
+      <ng-container *ngIf="!is6Months">
+        <h1>
+          Essayer gratuitement pendant 15 jours
+        </h1>
+        <p>
+          Faites évoluer votre offre a tout moment pour répondre à vos besoins.
+        </p>
+      </ng-container>
+    </div>
+
+    <div class="defaultPrices">
+      <div *ngIf="isStandardPopupShowing" class="offerPopupContainer">
+        <div class="offerPopup">
+          <div class="circleContainer">
+            <div class="circle"></div>
+            <button *ngIf="isMobile" (click)="toggleStandardPopup(false)" class="closePopup">fermer</button>
+          </div>
+          <h2>En comparaison d’un traitement manuel</h2>
+          <p>
+            En moyenne collecter et mettre à jour les documents d’un fournisseur prend 51 minutes par an et par fournisseur.
+            <br>
+            <br>
+            Le gain est estimé à partir du salaire moyen chargé d’un acheteur soit 55.000€.
+          </p>
+        </div>
+      </div>
+      <div class="offerHeader">
+        <h3>Standard</h3>
+        <p  class="offerHeaderPrice">
+          {{
+            standardPrice <= 100 ? 
+            standardPricesToEconomy[standardPrice].price + ' €/mois':
+            '- - €/mois'
+          }}
+        </p>
+      </div>
+      <div class="offerOptionsContainer">
+        <p class="offerOption">
+          <img src="/assets/check.svg">
+          Accès aux documents légaux vérifiés
+        </p>
+      </div>
+      <div class="offerPerUserContainer">
+        <p>Pour combien de fournisseurs ?</p>
+        <input type="range" min="10" max="110" value="10" step="10" class="slider" (input)="defaultPriceChanged($event)">
+        <span [ngStyle]="{'left': standardPrice + '%' }" class="sliderValue">{{standardPrice > 100 ? '+100' : standardPrice}}</span>
+      </div>
+      <div class="takeOfferContainer">
+        <p
+          (mouseenter)="toggleStandardPopup(true)"
+          (mouseleave)="toggleStandardPopup(false)"
+          (click)="toggleStandardPopup(true)"
+          >{{
+            standardPrice <= 100 ? 
+            'soit ' + standardPricesToEconomy[standardPrice].gain + ' d\'économie par an':
+            'plus de 100 fournisseurs ?'
+          }}
+          <img src="/assets/question-circle.svg" >
+        </p>
+        <button class="askForDemo" (click)="requestDemo()">
+          <ng-container *ngIf="is6Months">
+            Profiter de l’offre
+          </ng-container>
+          <ng-container *ngIf="!is6Months">
+            {{
+              standardPrice <= 100 ? 
+              'Essayer 15 jours gratuitement':
+              'Demander un devis'
+            }}
+          </ng-container>
+        </button>
+        <p class="withoutEngagement">Sans engagement</p>
+      </div>
+    </div>
+
+    <div class="defaultPrices premiumPrices">
+      <div *ngIf="isPremiumPopupShowing" class="offerPopupContainer">
+        <div class="offerPopup">
+          <div class="circleContainer">
+            <div class="circle"></div>
+            <button *ngIf="isMobile" (click)="togglePremiumPopup(false)" class="closePopup">fermer</button>
+          </div>
+          <h2>En comparaison d’un traitement manuel</h2>
+          <p>
+            En moyenne réaliser une due diligence de niveau 2 et la mettre à jour prend 30 heures et 40 minutes par an et par fournisseur.
+            <br>
+            <br>
+            Le gain est estimé à partir du salaire moyen chargé d’un acheteur soit 55.000€.
+          </p>
+        </div>
+      </div>
+      <div class="offerHeader">
+        <h3>Premium</h3>
+        <p  class="offerHeaderPrice">
+          {{
+            premiumPrice <= 100 ? 
+            premiumPricesToEconomy[premiumPrice].price + ' €/mois':
+            '- - €/mois'
+          }}
+        </p>
+      </div>
+      <div class="offerOptionsContainer">
+        <p class="offerOption">
+          <img src="/assets/check.svg">
+          Accès aux documents légaux vérifiés
+        </p>
+        <p class="offerOption">
+          <img src="/assets/check.svg">
+          Condamnations
+        </p>
+        <p class="offerOption">
+          <img src="/assets/check.svg">
+          Cartographie e-reputationnelle 
+        </p>
+        <p class="offerOption">
+          <img src="/assets/check.svg">
+          Données légales & financières
+        </p>
+      </div>
+      <div class="offerPerUserContainer">
+        <p>Pour combien de fournisseurs ?</p>
+        <input type="range" min="10" max="110" value="10" step="10" class="slider" (input)="premiumPriceChanged($event)">
+        <span [ngStyle]="{'left': premiumPrice + '%' }" class="sliderValue">{{premiumPrice > 100 ? '+100' : premiumPrice}}</span>
+      </div>
+      <div class="takeOfferContainer">
+        <p 
+          (mouseenter)="togglePremiumPopup(true)"
+          (mouseleave)="togglePremiumPopup(false)"
+          (click)="togglePremiumPopup(true)"
+          >{{
+          premiumPrice <= 100 ? 
+          'soit ' + premiumPricesToEconomy[premiumPrice].gain + ' d\'économie par an':
+          'plus de 100 fournisseurs ?'
+          }}
+          <img src="/assets/question-circle.svg" >
+        </p>
+        <button class="askForDemo" (click)="requestDemo()">
+          <ng-container *ngIf="is6Months">
+            Profiter de l’offre
+          </ng-container>
+          <ng-container *ngIf="!is6Months">
+            {{
+              premiumPrice <= 100 ? 
+              'Essayer 15 jours gratuitement':
+              'Demander un devis'
+            }}
+          </ng-container>
+        </button>
+        <p class="withoutEngagement">Sans engagement</p>
+      </div>
+    </div>
+
+  </div>
+</ng-template>
+
+<ng-template #process>
+  <div class="processContainer">
+    <h1>Comment ça marche ?</h1>
+    <div class="cardsList">
+      <div class="stepsLinkContainer">
+        <img src="/assets/steps-link.svg">
+      </div>
+      <div class="card">
+        <img src="/assets/step1.svg">
+        <h3>Votre fournisseur nous envoie vos documents que nous nous chargeons de vérifier</h3>
+      </div>
+
+      <div class="card">
+        <img src="/assets/step2.svg">
+        <h3>Nous collectons les décisions de justice et cartographions la réputation en ligne de vos fournisseurs automatiquement</h3>
+      </div>
+
+      <div class="card">
+        <img src="/assets/step3.svg">
+        <h3>Vous êtes en conformité ! Retrouvez toutes les informations sur vos fournisseurs et soyez alerté en cas de nouveaux risques détectés</h3>
+      </div>
+    </div>
+    <button class="schedualAnAppointementButton" (click)="requestDemo()">Poser une question</button>
+  </div>
+</ng-template>
+
+<ng-template #security>
+  <div class="securityContainer">
+    <div class="securityContent">
+      <h1>Vos données <br>
+        sont sécurisées</h1>
+      <div class="barrier"><div class="bar"></div></div>
+      <div class="securityClauseContainer">
+        <div class="securityClause">
+          <img src="/assets/union_europeene.svg">
+          <div class="securityClauseContent">
+            <h4>RGPD</h4>
+            <p>Anoti a été développé selon le principe du Privacy by Design afin de garantir le respect du RGPD</p>
+          </div>
+        </div>
+        <div class="securityClause">
+          <img src="/assets/cloud.svg">
+          <div class="securityClauseContent">
+            <h4>Cloud Act</h4>
+            <p>Anoti est hébergé en France chez des prestataires de cloud français. Anoti n’est pas soumis aux lois et aux réglementations extra européenne</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #footer>
+  <div class="footerContainer">
+    <!--<button class="footerButton"> Job </button>-->
+    <button class="footerButton" (click)="openLegalMentions()"> Mentions légales </button>
+  </div>
+</ng-template>

@@ -1,0 +1,38 @@
+:host {
+  font-family: manrope;
+  color: #0D1965;
+  cursor: pointer;
+
+  .contentContainer {
+    overflow: hidden;
+  }
+
+  h3 {
+    font-family: manrope-semibold;
+    margin-top: 15px;
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 5px;
+    text-align: left;
+  }
+  
+  .content {
+    font-family: manrope-medium;
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #4B4B4B;
+    max-width: 314px;
+    overflow: hidden;
+  }
+
+  .subContent {
+    font-family: manrope-medium;
+    background: #FFF2EE;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 3px;
+    max-width: 314px;
+    margin-bottom: 26px;
+    margin-top: 21px;
+  }
+}

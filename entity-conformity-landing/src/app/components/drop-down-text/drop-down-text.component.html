@@ -1,0 +1,8 @@
+
+<div (mouseenter)="open()" (mouseleave)="close()">
+  <h3>{{ title }}</h3>
+  <div class="contentContainer" [@openClose]="isOpen ? 'open' : 'closed'">
+    <p class="content" >{{content}}</p>
+  </div>
+  <p *ngIf="!!subContent" class="subContent" >{{subContent}}</p>
+</div>

@@ -1,0 +1,404 @@
+$small-screen-breakpoint: 900px;
+
+h1 {
+  line-height: 3.5rem;
+  @media (max-width: $small-screen-breakpoint) {
+    line-height: 2rem;
+    font-size: 30px;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 33px 150px 33px 150px;
+  box-sizing: border-box;
+
+  @media (max-width: $small-screen-breakpoint) {
+    padding: 20px 24px 20px 24px;
+  }
+
+  .headerButtonsContainer {
+    display: flex;
+
+    .loginButton, .headerButton {
+      all: unset;
+      cursor: pointer;
+      font-family: manrope;
+      font-size: 16px;
+      margin: 0 20px 0 20px;
+      white-space: nowrap;
+    }
+  
+    .loginButton {
+      color: #FF7E54;
+      width: 146px;
+      height: 61px;
+      border: 1px solid #FF7E54;
+      text-align: center;
+      border-radius: 3px;
+  
+      @media (max-width: $small-screen-breakpoint) {
+        margin-right: 2px;
+      }
+    }
+  }
+
+  img {
+    width: 137px;
+
+    @media (max-width: $small-screen-breakpoint) {
+      width: 73px;
+    }
+  }
+}
+
+.subscribeForFree {
+  all: unset;
+  cursor: pointer;
+  width: 222px;
+  height: 61px;
+  text-align: center;
+  background: #FF9775;
+  border-radius: 3px;
+  color: #FFFFFF;
+  font-family: manrope;
+  font-size: 16px;
+}
+
+.introContainer {
+  display: flex;
+  justify-content: center;
+  flex-flow: row;
+  position: relative;
+  width: 100%;
+  background: #4F9A8F;
+  padding-top: 103px;
+  color: #FFFFFF;
+  margin-bottom: 100px;
+  box-sizing: border-box;
+  padding-left: 160px;
+  padding-right: 160px;
+
+  @media (max-width: $small-screen-breakpoint) {
+    padding-left: 25px;
+    padding-right: 25px;
+    flex-wrap: wrap;
+  }
+
+  .introCurvedBottomBorder {
+    position: absolute;
+    height: 100px;
+    bottom: -50px;
+    width: 100%;
+    background: #4F9A8F;
+    border-radius: 100%;
+  }
+
+  .introLeftSide {
+    z-index: 2;
+
+    @media (max-width: $small-screen-breakpoint) {
+      text-align: center;
+    }
+
+    .introHeader {
+      font-family: raleway;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 50px;
+
+      @media (max-width: $small-screen-breakpoint) {
+        line-height: 2rem;
+        font-size: 30px;
+      }
+    }
+
+    .introSubHeader {
+      font-family: manrope;
+      font-size: 18px;
+      margin-top: 22px;
+      margin-bottom: 22px;
+      line-height: 30px;
+    }
+
+    .introButtonsContainer {
+      width: fit-content;
+
+      @media (max-width: $small-screen-breakpoint) {
+        width: 100%;
+      }
+  
+      .gainTime {
+        font-family: manrope;
+        font-weight: 600;
+        font-size: 14px;
+        color: #FFFFFF;
+        text-align: center;
+        margin-top: 9px;
+        margin-bottom: 85px;
+      }
+    }
+
+
+  }
+
+  .introRightSide {
+    position: relative;
+    box-sizing: border-box;
+    margin-left: 140px;
+
+    @media (max-width: $small-screen-breakpoint) {
+      img {
+        width: 150px;
+      }
+      margin-left: 0;
+    }
+  }
+}
+
+.goalsContainer {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 84px;
+
+  h1 {
+    width: 50%;
+    font-family: raleway-semibold;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    text-align: center;
+    color: #0D1965;
+    margin-bottom: 52px;
+
+    @media (max-width: $small-screen-breakpoint) {
+      width: 100%;
+    }
+  }
+
+  .argumentsList {
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+
+    @media (max-width: $small-screen-breakpoint) {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+    }
+
+    .argument {
+      display: flex;
+      flex-flow: column;
+      width: 226px;
+
+      @media (max-width: $small-screen-breakpoint) {
+        text-align: center;
+      }
+
+      img {
+        height: 309px;
+      }
+
+      .argumentTitle {
+        font-family: raleway;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        color: #0D1965;
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+
+      .argumentDescription {
+        font-family: manrope;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        color: #0D1965;
+        margin-bottom: 24px;
+      }
+    }
+  }
+}
+
+.howItWorksContainer {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+
+  h1 {
+    width: 50%;
+    font-family: raleway-semibold;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    text-align: center;
+    color: #0D1965;
+    margin-bottom: 32px;
+
+    @media (max-width: $small-screen-breakpoint) {
+      width: 100%;
+    }
+  }
+
+  h3 {
+    width: 40%;
+    font-family: manrope;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    color: #0D1965;
+  }
+
+  .hovered {
+    background: #FFBEA9;
+  }
+
+  .howItWorksExplained {
+    width: 100%;
+    min-height: 639px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+
+    @media (max-width: $small-screen-breakpoint) {
+      flex-flow: column-reverse;
+      flex-wrap: wrap;
+    }
+    
+    .howItWorksLeftSide {
+      margin-top: 49px;
+      margin-left: 182px;
+      position: relative;
+
+
+      @media (max-width: $small-screen-breakpoint) {
+        margin-left: 15px;
+      }
+
+      .section {
+        display: flex;
+
+        img {
+          width: 21px;
+          height: 18px;
+          margin-right: 11px;
+          margin-top: 20px;
+        }
+
+        .sectionContent {
+          display: flex;
+          flex-flow: column;
+
+          h2 {
+            font-family: raleway-semibold;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            color: #0D1965;
+            margin-top: 15px;
+          }
+        }
+      }
+
+      .contactAnExpert {
+        all: unset;
+        cursor: pointer;
+        width: 222px;
+        height: 61px;
+        text-align: center;
+        background: #FF9775;
+        border-radius: 3px;
+        color: white;
+        font-family: manrope;
+        font-size: 16px;
+        margin-top: 15px;
+        position: absolute;
+        bottom: 0;
+        margin-left: 33px;
+      }
+
+    }
+
+    .howItWorksRightSide {
+      position: relative;
+
+      .circle {
+        width: 382px;
+        position: absolute;
+        right: 0;
+        top: 40px;
+
+        @media (max-width: $small-screen-breakpoint) {
+          width: 50%;
+        }
+      }
+      
+      .screenshot {
+        position: relative;
+        width: 709px;
+        z-index: 2;
+        margin-top: 114px;
+
+        @media (max-width: $small-screen-breakpoint) {
+          margin-top: 90px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.subscribeInviteContainer {
+  width: 100%;
+  background: #4F9A8F;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding-top: 86px;
+  padding-bottom: 102px;
+  color: white;
+  text-align: center;
+  margin-top: 60px;
+
+  h1 {
+    font-size: 35px;
+  }
+
+  p {
+    max-width: 500px;
+  }
+
+  button {
+    margin-top: 65px;
+  }
+
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 85px;
+  padding-right: 157px;
+  box-sizing: border-box;
+
+  .footerButton {
+    all: unset;
+    cursor: pointer;
+    font-family: manrope;
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: 16px;
+  }
+}

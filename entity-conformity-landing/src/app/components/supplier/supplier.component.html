@@ -1,0 +1,125 @@
+<ng-container *ngTemplateOutlet="header"></ng-container>
+<ng-container *ngTemplateOutlet="intro"></ng-container>
+<ng-container *ngTemplateOutlet="goals"></ng-container>
+<ng-container *ngTemplateOutlet="howItWorks"></ng-container>
+<ng-container *ngTemplateOutlet="subscribeInvite"></ng-container>
+<ng-container *ngTemplateOutlet="footer"></ng-container>
+
+<ng-template #header>
+  <div class="header">
+    <img src="/assets/logo-anoti.svg">
+    <div class="headerButtonsContainer">
+      <button class="headerButton" [routerLink]="['/contractor']"> Donneurs d'ordre </button>
+      <button class="headerButton" [routerLink]="['/supplier']"> Fournisseurs </button>
+      <!--<button class="headerButton"> Manifeste </button>-->
+      <!--<button class="headerButton"> Blog </button>-->
+      <!--
+      <ng-container *ngIf="!isLanding">
+        <button class="askForDemo" (click)="requestDemo()">Demander une démo</button>
+        <button class="loginButton"> S'inscrire </button>
+      </ng-container>
+      -->
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #intro>
+  <div class="introContainer">
+    <div class="introCurvedBottomBorder"></div>
+    <div class="introLeftSide">
+      <h1 class="introHeader">Fournisseurs, optimisez le partage de vos documents</h1>
+      <p class="introSubHeader">Gagnez du temps grâce à notre outil gratuit et sans engagement. Ajoutez vos documents légaux une fois et paratagez les avec l’ensemble de vos clients</p>
+      <div class="introButtonsContainer">
+        <button class="subscribeForFree" (click)="requestDemo()">S'inscrire gratuitement</button>
+        <p class="gainTime">Gratuit et sans engagement</p>
+      </div>
+    </div>
+    <div class="introRightSide">
+      <img src="/assets/supplier-intro.svg" alt="">
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #goals>
+  <div class="goalsContainer">
+    <h1> Quels avantages ?</h1>
+    <div class="argumentsList">
+      <div class="argument">
+        <img src="/assets/gain-time.png">
+        <h3 class="argumentTitle">Gagnez du temps</h3>
+        <p class="argumentDescription">Vos documents sont centralisés, vous les déposez une seule fois sur anoti pour que l'ensemble de vos clients y accèdent</p>
+      </div>
+
+      <div class="argument">
+        <img src="/assets/master-risks.png">
+        <h3 class="argumentTitle">Facilitez les échanges</h3>
+        <p class="argumentDescription">Améliorez la communication avec vos clients en leurs fournissants vos documents toujours à jour grâce à 
+          nos alertes</p>
+      </div>
+
+      <div class="argument">
+        <img src="/assets/contribute-to-business.png">
+        <h3 class="argumentTitle">Gratuit à vie</h3>
+        <p class="argumentDescription">Anoti est gratuit à vie pour les fournisseurs, nous nous rémunérons grâce aux souscriptions de vos donneurs d'ordres</p>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #howItWorks>
+  <div class="howItWorksContainer">
+    <h1>Une plateforme dédiée à vos besoins</h1>
+    <div class="howItWorksExplained">
+
+      <div class="howItWorksLeftSide">
+
+        <div class="section">
+          <img src="/assets/puces.svg">
+          <div class="sectionContent">
+            <h2>Pour vous</h2>
+            <drop-down-text
+              [isAnimationEnabled]="false"
+              [title]="'Accélérez vos ventes'"
+              [content]="'Grâce à anoti, promouvez votre conformité et ne manquez plus aucun appel d\'offres'"
+              [subContent]="'58% des acheteurs ont des objectifs liés à la RSE.'">
+            </drop-down-text>
+          </div>
+        </div>
+
+        <div class="section">
+          <img src="/assets/puces.svg">
+          <div class="sectionContent">
+            <h2>Pour vos clients</h2>
+            <drop-down-text
+              [isAnimationEnabled]="false"
+              [title]="'Une information centralisé'"
+              [content]="'Vos clients peuvent récupérer vos documents en passant directement par notre outil'">
+            </drop-down-text>
+          </div>
+        </div>
+      </div>
+
+      <div class="howItWorksRightSide">
+        <img src="/assets/screenshot2.svg" class="screenshot">
+        <img src="/assets/circle.png" class="circle">
+      </div>
+
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #subscribeInvite>
+  <div class="subscribeInviteContainer">
+    <h1>Inscrivez-vous, c’est gratuit !</h1>
+    <p>Vos données vous appartiennent, les informations que vous partagez avec Anoti serviront uniquement à la création de votre compte</p>
+    <button class="subscribeForFree" (click)="requestDemo()">S'inscrire gratuitement</button>
+  </div>
+
+</ng-template>
+
+<ng-template #footer>
+  <div class="footerContainer">
+    <!--<button class="footerButton"> Job </button>-->
+    <button class="footerButton" (click)="openLegalMentions()"> Mentions légales </button>
+  </div>
+</ng-template>
